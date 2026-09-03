@@ -227,3 +227,224 @@ Epoch: 480/500, loss: 1.2733143897814634, correct: 50 \
 Epoch: 490/500, loss: 1.015909159766978, correct: 50 \
 Epoch: 500/500, loss: 1.0155880674064057, correct: 50
 ![Xor](images/xor.png)
+
+# Task 2.5: Training
+## Simple
+Train time: 33 seconds. \
+Epoch: 0/500, loss: 0, correct: 0 \
+Epoch: 10/500, loss: 34.51041256554513, correct: 27 \
+Epoch: 20/500, loss: 33.820320936474594, correct: 27 \
+Epoch: 30/500, loss: 33.13731277319244, correct: 32 \
+Epoch: 40/500, loss: 31.800894323808418, correct: 43 \
+Epoch: 50/500, loss: 28.943650555136905, correct: 43 \
+Epoch: 60/500, loss: 23.795739499778954, correct: 44 \
+Epoch: 70/500, loss: 18.026728244657342, correct: 47 \
+Epoch: 80/500, loss: 13.516206107093511, correct: 49 \
+Epoch: 90/500, loss: 10.965295315552261, correct: 49 \
+Epoch: 100/500, loss: 14.949739250436359, correct: 45 \
+Epoch: 110/500, loss: 9.75982224192595, correct: 46 \
+Epoch: 120/500, loss: 10.032847820559965, correct: 46 \
+Epoch: 130/500, loss: 7.057236345528738, correct: 49 \
+Epoch: 140/500, loss: 8.24815500797534, correct: 46 \
+Epoch: 150/500, loss: 7.291708510700708, correct: 48 \
+Epoch: 160/500, loss: 6.4228737303300685, correct: 49 \
+Epoch: 170/500, loss: 6.248294803395315, correct: 48 \
+Epoch: 180/500, loss: 6.232072310264038, correct: 48 \
+Epoch: 190/500, loss: 7.779309782360227, correct: 47 \
+Epoch: 200/500, loss: 7.114120410858874, correct: 47 \
+Epoch: 210/500, loss: 4.969199738640375, correct: 49 \
+Epoch: 220/500, loss: 5.314282772141762, correct: 49 \
+Epoch: 230/500, loss: 8.600133084311873, correct: 45 \
+Epoch: 240/500, loss: 5.187481005673506, correct: 49 \
+Epoch: 250/500, loss: 4.3824975259069054, correct: 49 \
+Epoch: 260/500, loss: 5.806921182033377, correct: 47 \
+Epoch: 270/500, loss: 7.198764222559132, correct: 47 \
+Epoch: 280/500, loss: 4.1640444847466895, correct: 49 \
+Epoch: 290/500, loss: 4.1908086430222555, correct: 49 \
+Epoch: 300/500, loss: 7.168683074765014, correct: 46 \
+Epoch: 310/500, loss: 4.950084640792982, correct: 49 \
+Epoch: 320/500, loss: 3.668578438853513, correct: 49 \
+Epoch: 330/500, loss: 4.464336086997311, correct: 49 \
+Epoch: 340/500, loss: 7.379301476237241, correct: 46 \
+Epoch: 350/500, loss: 3.684505552871727, correct: 49 \
+Epoch: 360/500, loss: 3.4240583911945515, correct: 49 \
+Epoch: 370/500, loss: 6.203346143491324, correct: 47 \
+Epoch: 380/500, loss: 4.93632645220292, correct: 49 \
+Epoch: 390/500, loss: 3.0878887441773717, correct: 49 \
+Epoch: 400/500, loss: 3.161184442919254, correct: 49 \
+Epoch: 410/500, loss: 8.894239676209297, correct: 46 \
+Epoch: 420/500, loss: 3.590912875357981, correct: 49 \
+Epoch: 430/500, loss: 2.8192353285143175, correct: 49 \
+Epoch: 440/500, loss: 3.041944738065133, correct: 49 \
+Epoch: 450/500, loss: 9.561071629030556, correct: 46 \
+Epoch: 460/500, loss: 3.081041454114483, correct: 49 \
+Epoch: 470/500, loss: 2.6342079891638708, correct: 49 \
+Epoch: 480/500, loss: 2.856986167295984, correct: 49 \
+Epoch: 490/500, loss: 9.757647624426697, correct: 46 \
+Epoch: 500/500, loss: 2.8344403201117383, correct: 49
+![Simple tensor](images/simple_tensor.png)
+
+## Diag
+Train time: 33 seconds. \
+Epoch: 0/500, loss: 0, correct: 0 \
+Epoch: 10/500, loss: 18.478419524824563, correct: 44 \
+Epoch: 20/500, loss: 16.62259041656392, correct: 44 \
+Epoch: 30/500, loss: 15.492108880396495, correct: 44 \
+Epoch: 40/500, loss: 14.215929889816294, correct: 44 \
+Epoch: 50/500, loss: 12.685339822341046, correct: 44 \
+Epoch: 60/500, loss: 10.95519908712014, correct: 44 \
+Epoch: 70/500, loss: 9.203497210432273, correct: 44 \
+Epoch: 80/500, loss: 7.69825637552954, correct: 45 \
+Epoch: 90/500, loss: 6.64971716692766, correct: 46 \
+Epoch: 100/500, loss: 5.823254240831767, correct: 48 \
+Epoch: 110/500, loss: 5.18621138750014, correct: 49 \
+Epoch: 120/500, loss: 4.714700518952672, correct: 50 \
+Epoch: 130/500, loss: 4.337292490919084, correct: 50 \
+Epoch: 140/500, loss: 4.013591140921118, correct: 50 \
+Epoch: 150/500, loss: 3.7284687297070356, correct: 50 \
+Epoch: 160/500, loss: 3.476388156326025, correct: 50 \
+Epoch: 170/500, loss: 3.2529726361125078, correct: 50 \
+Epoch: 180/500, loss: 3.0545622831933916, correct: 50 \
+Epoch: 190/500, loss: 2.877994473378574, correct: 50 \
+Epoch: 200/500, loss: 2.7204945016526123, correct: 50 \
+Epoch: 210/500, loss: 2.5796164293248314, correct: 50 \
+Epoch: 220/500, loss: 2.4532057303234716, correct: 50 \
+Epoch: 230/500, loss: 2.339371065086603, correct: 50 \
+Epoch: 240/500, loss: 2.2364596746362606, correct: 50 \
+Epoch: 250/500, loss: 2.1430341610297754, correct: 50 \
+Epoch: 260/500, loss: 2.0578499786630626, correct: 50 \
+Epoch: 270/500, loss: 1.9798336860158288, correct: 50 \
+Epoch: 280/500, loss: 1.9080622786981283, correct: 50 \
+Epoch: 290/500, loss: 1.8417439484073572, correct: 50 \
+Epoch: 300/500, loss: 1.7802005204445834, correct: 50 \
+Epoch: 310/500, loss: 1.722851696884011, correct: 50 \
+Epoch: 320/500, loss: 1.6692011176052666, correct: 50 \
+Epoch: 330/500, loss: 1.6188241653013884, correct: 50 \
+Epoch: 340/500, loss: 1.5713573859541166, correct: 50 \
+Epoch: 350/500, loss: 1.5264893683887186, correct: 50 \
+Epoch: 360/500, loss: 1.4839529182408084, correct: 50 \
+Epoch: 370/500, loss: 1.4435183660870394, correct: 50 \
+Epoch: 380/500, loss: 1.4049878610650475, correct: 50 \
+Epoch: 390/500, loss: 1.368190516090396, correct: 50 \
+Epoch: 400/500, loss: 1.3329782862531119, correct: 50 \
+Epoch: 410/500, loss: 1.2992224767305145, correct: 50 \
+Epoch: 420/500, loss: 1.266810789934676, correct: 50 \
+Epoch: 430/500, loss: 1.2356448334420813, correct: 50 \
+Epoch: 440/500, loss: 1.205638020602029, correct: 50 \
+Epoch: 450/500, loss: 1.1767138047658219, correct: 50 \
+Epoch: 460/500, loss: 1.148804196016138, correct: 50 \
+Epoch: 470/500, loss: 1.1218485162748142, correct: 50 \
+Epoch: 480/500, loss: 1.0957923548593667, correct: 50 \
+Epoch: 490/500, loss: 1.070586692039057, correct: 50 \
+Epoch: 500/500, loss: 1.0461871629794803, correct: 50
+![Diag tensor](images/diag_tensor.png)
+
+## Split
+Train time: 224 seconds. \
+Epoch: 0/500, loss: 0, correct: 0 \
+Epoch: 10/500, loss: 33.51534643493197, correct: 30 \
+Epoch: 20/500, loss: 32.870969233504574, correct: 30 \
+Epoch: 30/500, loss: 31.879046805885746, correct: 32 \
+Epoch: 40/500, loss: 30.968297635592908, correct: 39 \
+Epoch: 50/500, loss: 29.939663850680688, correct: 35 \
+Epoch: 60/500, loss: 26.81719401734741, correct: 37 \
+Epoch: 70/500, loss: 23.871176922997932, correct: 41 \
+Epoch: 80/500, loss: 20.971497741160356, correct: 43 \
+Epoch: 90/500, loss: 19.686951054510516, correct: 45 \
+Epoch: 100/500, loss: 18.48926917046074, correct: 41 \
+Epoch: 110/500, loss: 17.801078767642352, correct: 40 \
+Epoch: 120/500, loss: 16.043170117740793, correct: 40 \
+Epoch: 130/500, loss: 14.907333318531114, correct: 41 \
+Epoch: 140/500, loss: 15.896941619682933, correct: 41 \
+Epoch: 150/500, loss: 10.27846828545837, correct: 46 \
+Epoch: 160/500, loss: 8.172872345008363, correct: 47 \
+Epoch: 170/500, loss: 17.109738721630663, correct: 41 \
+Epoch: 180/500, loss: 5.892477150622451, correct: 48 \
+Epoch: 190/500, loss: 4.014672333892285, correct: 50 \
+Epoch: 200/500, loss: 3.4453601569090857, correct: 50 \
+Epoch: 210/500, loss: 3.034364142306125, correct: 50 \
+Epoch: 220/500, loss: 2.714940205841151, correct: 50 \
+Epoch: 230/500, loss: 2.4684555786625335, correct: 50 \
+Epoch: 240/500, loss: 2.3279839969132854, correct: 50 \
+Epoch: 250/500, loss: 2.723120500437978, correct: 49 \
+Epoch: 260/500, loss: 103.70263795567968, correct: 29 \
+Epoch: 270/500, loss: 6.235799495088109, correct: 50 \
+Epoch: 280/500, loss: 3.194444734566975, correct: 50 \
+Epoch: 290/500, loss: 2.6168639052667126, correct: 50 \
+Epoch: 300/500, loss: 2.285182577794794, correct: 50 \
+Epoch: 310/500, loss: 2.0385776351796574, correct: 50 \
+Epoch: 320/500, loss: 1.844292386167797, correct: 50 \
+Epoch: 330/500, loss: 1.6849337031641993, correct: 50 \
+Epoch: 340/500, loss: 1.5510801876805111, correct: 50 \
+Epoch: 350/500, loss: 1.436618613428864, correct: 50 \
+Epoch: 360/500, loss: 1.3373789240487814, correct: 50 \
+Epoch: 370/500, loss: 1.2500469727693713, correct: 50 \
+Epoch: 380/500, loss: 1.1717894257140717, correct: 50 \
+Epoch: 390/500, loss: 1.101901921074846, correct: 50 \
+Epoch: 400/500, loss: 1.0389187855575244, correct: 50 \
+Epoch: 410/500, loss: 0.9817565184125465, correct: 50 \
+Epoch: 420/500, loss: 0.9297165705315837, correct: 50 \
+Epoch: 430/500, loss: 0.8821127408706908, correct: 50 \
+Epoch: 440/500, loss: 0.8383906115457945, correct: 50 \
+Epoch: 450/500, loss: 0.7980860937153975, correct: 50 \
+Epoch: 460/500, loss: 0.7608117899746214, correct: 50 \
+Epoch: 470/500, loss: 0.7262416471557499, correct: 50 \
+Epoch: 480/500, loss: 0.694056483539589, correct: 50 \
+Epoch: 490/500, loss: 0.6640547867101049, correct: 50 \
+Epoch: 500/500, loss: 0.636030998458366, correct: 50
+![Split tensor](images/split_tensor.png)
+
+## Xor
+Train time: 235 seconds. \
+Epoch: 0/500, loss: 0, correct: 0 \
+Epoch: 10/500, loss: 31.507691463776194, correct: 33 \
+Epoch: 20/500, loss: 30.25009923069595, correct: 34 \
+Epoch: 30/500, loss: 29.11310741814506, correct: 34 \
+Epoch: 40/500, loss: 27.896940362036798, correct: 35 \
+Epoch: 50/500, loss: 30.35888404810178, correct: 28 \
+Epoch: 60/500, loss: 26.906767371203305, correct: 41 \
+Epoch: 70/500, loss: 28.84511829642539, correct: 34 \
+Epoch: 80/500, loss: 24.171000500167906, correct: 38 \
+Epoch: 90/500, loss: 25.71086060465319, correct: 36 \
+Epoch: 100/500, loss: 21.68954783027885, correct: 40 \
+Epoch: 110/500, loss: 18.716136036940657, correct: 44 \
+Epoch: 120/500, loss: 17.371442884108593, correct: 43 \
+Epoch: 130/500, loss: 17.12141745372546, correct: 44 \
+Epoch: 140/500, loss: 16.378284764204622, correct: 44 \
+Epoch: 150/500, loss: 15.929610046370803, correct: 44 \
+Epoch: 160/500, loss: 13.745740668497099, correct: 44 \
+Epoch: 170/500, loss: 13.987835175176876, correct: 43 \
+Epoch: 180/500, loss: 14.17637982359944, correct: 43 \
+Epoch: 190/500, loss: 12.783386408070276, correct: 44 \
+Epoch: 200/500, loss: 12.574527812198907, correct: 44 \
+Epoch: 210/500, loss: 12.664273369389875, correct: 44 \
+Epoch: 220/500, loss: 11.93201839272133, correct: 44 \
+Epoch: 230/500, loss: 11.305911651584013, correct: 44 \
+Epoch: 240/500, loss: 11.894074734870516, correct: 45 \
+Epoch: 250/500, loss: 10.41557493993434, correct: 45 \
+Epoch: 260/500, loss: 13.488811769632564, correct: 45 \
+Epoch: 270/500, loss: 14.71326403302139, correct: 45 \
+Epoch: 280/500, loss: 10.575853430099562, correct: 46 \
+Epoch: 290/500, loss: 9.153528144015063, correct: 45 \
+Epoch: 300/500, loss: 9.451120366612487, correct: 45 \
+Epoch: 310/500, loss: 15.849074732057165, correct: 42 \
+Epoch: 320/500, loss: 9.35135220643947, correct: 46 \
+Epoch: 330/500, loss: 12.05809162894541, correct: 45 \
+Epoch: 340/500, loss: 7.839547407374594, correct: 47 \
+Epoch: 350/500, loss: 7.36557541958354, correct: 47 \
+Epoch: 360/500, loss: 7.080420612267056, correct: 47 \
+Epoch: 370/500, loss: 6.943018418847969, correct: 47 \
+Epoch: 380/500, loss: 9.802971024918465, correct: 45 \
+Epoch: 390/500, loss: 15.325096278410737, correct: 44 \
+Epoch: 400/500, loss: 6.79163439903159, correct: 48 \
+Epoch: 410/500, loss: 6.420838194012306, correct: 48 \
+Epoch: 420/500, loss: 6.177262694584946, correct: 48 \
+Epoch: 430/500, loss: 6.9299262540575866, correct: 46 \
+Epoch: 440/500, loss: 15.59088786836238, correct: 44 \
+Epoch: 450/500, loss: 8.148051793969673, correct: 47 \
+Epoch: 460/500, loss: 6.53163027372872, correct: 47 \
+Epoch: 470/500, loss: 7.131701697947054, correct: 47 \
+Epoch: 480/500, loss: 9.430525000433533, correct: 46 \
+Epoch: 490/500, loss: 8.83869557861201, correct: 46 \
+Epoch: 500/500, loss: 7.67886697644555, correct: 47
+![Xor tensor](images/xor_tensor.png)
