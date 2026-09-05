@@ -42,7 +42,6 @@ def index_to_position(index: Index, strides: Strides) -> int:
     Returns:
         Position in storage
     """
-    strides = array(strides)
     return np.sum(index * strides)
 
 
@@ -59,7 +58,7 @@ def to_index(ordinal: int, shape: Shape, out_index: OutIndex) -> None:
         out_index : return index corresponding to position.
 
     """
-    out_index[:] = np.mod(ordinal // np.cumprod(np.concatenate(([1], shape[:0:-1])))[::-1], shape)
+    out_index[:] = np.mod(ordinal // np.cumprod(np.concatenate((np.ones(1), shape[:0:-1])))[::-1], shape)
 
 
 def broadcast_index(

@@ -47,7 +47,7 @@ def max(x: float, y: float) -> float:
 
 def is_close(x: float, y: float) -> float:
     "$f(x) = |x - y| < 1e-2$"
-    return 1.0 if max(x - y, y - x) < 1e-2 else 0.0
+    return 1.0 if -1e-2 < x - y < 1e-2 else 0.0
 
 
 def sigmoid(x: float) -> float:
@@ -62,7 +62,7 @@ def sigmoid(x: float) -> float:
 
     for stability.
     """
-    return 1.0 / (1.0 + exp(-x)) if x >= 0 else exp(x) / (1.0 + exp(x))
+    return 1.0 / (1.0 + math.exp(-x)) if x >= 0 else math.exp(x) / (1.0 + math.exp(x))
 
 
 def relu(x: float) -> float:
@@ -71,7 +71,7 @@ def relu(x: float) -> float:
 
     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
     """
-    return max(x, 0.)
+    return x if x > 0.0 else 0.0
 
 
 EPS = 1e-6
@@ -89,7 +89,7 @@ def exp(x: float) -> float:
 
 def log_back(x: float, d: float) -> float:
     r"If $f = log$ as above, compute $d \times f'(x)$"
-    return mul(d, inv(x + EPS))
+    return d / (x + EPS)
 
 
 def inv(x: float) -> float:
@@ -99,7 +99,7 @@ def inv(x: float) -> float:
 
 def inv_back(x: float, d: float) -> float:
     r"If $f(x) = 1/x$ compute $d \times f'(x)$"
-    return mul(d, neg(inv(mul(x, x))))
+    return -d / x / x
 
 
 def relu_back(x: float, d: float) -> float:
