@@ -41,8 +41,8 @@ jobs:
         echo "Module 3"
         pytest tests -x -m task3_1
         pytest tests -x -m task3_2
-        pytest tests -x -m task3_3
-        pytest tests -x -m task3_4
+        # pytest tests -x -m task3_3 # No GPU in GitHub actions
+        # pytest tests -x -m task3_4 # No GPU in GitHub actions
         # echo "Module 4"
         # pytest tests -x -m task4_1
         # pytest tests -x -m task4_2

@@ -4,6 +4,7 @@ Be sure you have minitorch installed in you Virtual Env.
 """
 
 import minitorch
+import time
 
 
 def RParam(*shape):
@@ -71,6 +72,7 @@ class TensorTrain:
         y = minitorch.tensor(data.y)
 
         losses = []
+        start_time = time.perf_counter()
         for epoch in range(1, self.max_epochs + 1):
             total_loss = 0.0
             correct = 0
@@ -93,11 +95,33 @@ class TensorTrain:
                 y2 = minitorch.tensor(data.y)
                 correct = int(((out.detach() > 0.5) == y2).sum()[0])
                 log_fn(epoch, total_loss, correct, losses)
+        end_time = time.perf_counter()
+        print(f"Average epoch time: {(end_time - start_time) / self.max_epochs:.6f} seconds")
 
 
 if __name__ == "__main__":
-    PTS = 50
-    HIDDEN = 2
-    RATE = 0.5
-    data = minitorch.datasets["Simple"](PTS)
-    TensorTrain(HIDDEN).train(data, RATE)
+    import argparse
+        
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--PTS", type=int, default=50, help="number of points")
+    parser.add_argument("--HIDDEN", type=int, default=10, help="number of hiddens")
+    parser.add_argument("--RATE", type=float, default=0.05, help="learning rate")
+    parser.add_argument("--DATASET", default="simple", help="dataset")
+    parser.add_argument("--EPOCHS", type=int, default=500, help="number of epochs")
+
+    args = parser.parse_args()
+
+    PTS = args.PTS
+
+    if args.DATASET == "xor":
+        data = minitorch.datasets["Xor"](PTS)
+    elif args.DATASET == "simple":
+        data = minitorch.datasets["Simple"](PTS)
+    elif args.DATASET == "split":
+        data = minitorch.datasets["Split"](PTS)
+
+    HIDDEN = int(args.HIDDEN)
+    RATE = args.RATE
+    EPOCHS = args.EPOCHS
+
+    TensorTrain(HIDDEN).train(data, RATE, EPOCHS)

@@ -1,4 +1,5 @@
 import random
+import time
 
 import numba
 
@@ -70,8 +71,9 @@ class FastTrain:
         optim = minitorch.SGD(self.model.parameters(), learning_rate)
         BATCH = 10
         losses = []
+        start_time = time.perf_counter()
 
-        for epoch in range(max_epochs):
+        for epoch in range(1, max_epochs + 1):
             total_loss = 0.0
             c = list(zip(data.X, data.y))
             random.shuffle(c)
@@ -102,6 +104,8 @@ class FastTrain:
                 y2 = minitorch.tensor(data.y)
                 correct = int(((out.detach() > 0.5) == y2).sum()[0])
                 log_fn(epoch, total_loss, correct, losses)
+        end_time = time.perf_counter()
+        print(f"Average epoch time: {(end_time - start_time) / max_epochs:.6f} seconds")
 
 
 if __name__ == "__main__":
@@ -114,6 +118,7 @@ if __name__ == "__main__":
     parser.add_argument("--BACKEND", default="cpu", help="backend mode")
     parser.add_argument("--DATASET", default="simple", help="dataset")
     parser.add_argument("--PLOT", default=False, help="dataset")
+    parser.add_argument("--EPOCHS", type=int, default=500, help="number of epochs")
 
     args = parser.parse_args()
 
@@ -128,7 +133,8 @@ if __name__ == "__main__":
 
     HIDDEN = int(args.HIDDEN)
     RATE = args.RATE
+    EPOCHS = args.EPOCHS
 
     FastTrain(
         HIDDEN, backend=FastTensorBackend if args.BACKEND != "gpu" else GPUBackend
-    ).train(data, RATE)
+    ).train(data, RATE, EPOCHS)

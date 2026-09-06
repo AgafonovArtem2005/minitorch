@@ -292,11 +292,12 @@ def _sum_practice(out: Storage, a: Storage, size: int) -> None:
 
     cache[pos] = a[i] if i < size else 0.0
     while BLOCK_DIM > 1:
+        cuda.syncthreads()
         BLOCK_DIM //= 2
         if pos >= BLOCK_DIM:
             cache[pos - BLOCK_DIM] += cache[pos]
             return
-        cuda.syncthreads()
+    cuda.syncthreads()
     out[cuda.blockIdx.x] = cache[pos]
 
 
@@ -352,11 +353,12 @@ def tensor_reduce(
         a_ordinal = index_to_position(out_index, a_strides)
         cache[pos] = a_storage[a_ordinal + pos * a_strides[reduce_dim]] if out_index[reduce_dim] + pos < a_shape[reduce_dim] else reduce_value
         while BLOCK_DIM > 1:
+            cuda.syncthreads()
             BLOCK_DIM //= 2
             if pos >= BLOCK_DIM:
                 cache[pos - BLOCK_DIM] = fn(cache[pos - BLOCK_DIM], cache[pos])
                 return
-            cuda.syncthreads()
+        cuda.syncthreads()
         out[out_ordinal] = cache[pos]
 
     return cuda.jit()(_reduce)  # type: ignore
@@ -474,8 +476,8 @@ def _tensor_matrix_multiply(
     pj = cuda.threadIdx.y
 
     s = 0
-    a_pos = a_batch_stride * batch + i * a_strides[1]
-    b_pos = b_batch_stride * batch + j * b_strides[2]
+    a_pos = a_batch_stride * batch + i * a_strides[1] + pj * a_strides[2]
+    b_pos = b_batch_stride * batch + j * b_strides[2] + pi * b_strides[1]
     result = 0.0
     while s < a_shape[2]:
         a_shared[pi][pj] = a_storage[a_pos] if i < a_shape[1] and s + pj < a_shape[2] else 0.0
